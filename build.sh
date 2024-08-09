@@ -179,7 +179,7 @@ cd $BUILDDIR/$ARCH
 
 	rm -rf icu
 
-	tar xvf ../icu4c-62_1-src.tgz
+	tar xvf ../icu4c-75_1-src.tgz
 
 	cd icu/source
 
@@ -255,9 +255,9 @@ cd $BUILDDIR/$ARCH
 cd $BUILDDIR/$ARCH
 
 [ -e libicu-le-hb.a ] || [ $SKIP_ICUUC ] || [ $SKIP_HARFBUZZ ] || [ $SKIP_ICULEHB ] || {
-	rm -rf icu-le-hb-1.0.3
-	tar xvf ../icu-le-hb-1.0.3.tar.gz
-	cd icu-le-hb-1.0.3
+	rm -rf icu-le-hb-1.2.3
+	tar xvf ../icu-le-hb-1.2.3.tar.gz
+	cd icu-le-hb-1.2.3
 
 	cp -f $BUILDDIR/config.sub .
 	cp -f $BUILDDIR/config.guess .
