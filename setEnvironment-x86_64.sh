@@ -77,11 +77,13 @@ LDFLAGS="`echo $LDFLAGS | tr '\n' ' '`"
 CC="$NDK/toolchains/llvm/prebuilt/$MYARCH/bin/$GCCPREFIX$APILEVEL-clang"
 CXX="$NDK/toolchains/llvm/prebuilt/$MYARCH/bin/$GCCPREFIX$APILEVEL-clang++"
 CPP="$CC -E $CFLAGS"
+PAGE16="-Wl,-z,max-page-size=16384 -Wl,-z,common-page-size=16384"
 
 env \
 CFLAGS="$CFLAGS" \
 CXXFLAGS="$CXXFLAGS $CFLAGS -frtti -fexceptions" \
 LDFLAGS="$LDFLAGS" \
+PAGE16="$PAGE16" \
 CC="$CC" \
 CXX="$CXX" \
 RANLIB="$NDK/toolchains/llvm/prebuilt/$MYARCH/bin/llvm-ranlib" \

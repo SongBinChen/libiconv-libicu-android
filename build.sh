@@ -68,7 +68,7 @@ cd $BUILDDIR/$ARCH
 
 	env PATH=`pwd`:$PATH \
 		$BUILDDIR/setEnvironment-$ARCH.sh \
-		sh -c '$LD $CFLAGS $LDFLAGS -shared -Wl,-soname=libcharset.so libcharset/lib/.libs/*.o -o libcharset/lib/.libs/libcharset.so' || exit 1
+		sh -c '$LD $CFLAGS $LDFLAGS -shared -Wl,-soname=libcharset.so libcharset/lib/.libs/*.o -o libcharset/lib/.libs/libcharset.so $PAGE16' || exit 1
 
 	env PATH=`pwd`:$PATH \
 		$BUILDDIR/setEnvironment-$ARCH.sh \
@@ -76,7 +76,7 @@ cd $BUILDDIR/$ARCH
 
 	env PATH=`pwd`:$PATH \
 		$BUILDDIR/setEnvironment-$ARCH.sh \
-		sh -c '$LD $CFLAGS $LDFLAGS -shared -Wl,-soname=libiconv.so lib/.libs/*.o -o lib/.libs/libiconv.so' || exit 1
+		sh -c '$LD $CFLAGS $LDFLAGS -shared -Wl,-soname=libiconv.so lib/.libs/*.o -o lib/.libs/libiconv.so $PAGE16' || exit 1
 
 	env PATH=`pwd`:$PATH \
 		$BUILDDIR/setEnvironment-$ARCH.sh \
